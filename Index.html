@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Player</title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="imageDisplay_player"></div>
+      
+        <audio src="" ></audio>
+    
+        <div id="controller">
+            <h4 class="titleMusic"></h4>
+
+            <div id="progress-container">
+                <div id="progress"></div>
+            </div>
+
+            <div class="navigation">
+                <ion-icon onclick="prevMusic()" class="prev"  name="play-skip-back-circle-outline"></ion-icon>
+                <ion-icon onclick="playMusic()" id="play" name="play-circle-outline"></ion-icon>
+                <ion-icon onclick="pauseMusic()" id="pause" name="pause-circle-outline"></ion-icon>
+                <ion-icon onclick="nextMusic()" class="next"  name="play-skip-forward-circle-outline"></ion-icon>
+            </div>
+
+            <div>
+                <ion-icon onclick="volumeDownMusic()" class="volume" name="remove-circle-outline"></ion-icon>
+                <ion-icon id="imgVolume" class="volume" name="volume-high-outline"></ion-icon>
+                <ion-icon id="imgVolume" class="volume" name="volume-medium-outline"></ion-icon>
+                <ion-icon id="imgVolume" class="volume" name="volume-low-outline"></ion-icon>
+                <ion-icon id="imgVolume" class="volume" name="volume-off-outline"></ion-icon>
+                <ion-icon onclick="volumeUpMusic()" class="volume" name="add-circle-outline"></ion-icon> 
+            </div>
+                
+        </div>
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>

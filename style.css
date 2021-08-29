@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(assets/backgrounds/background_test2.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageDisplay_player {
+    animation: rotate 3s linear infinite;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    animation-play-state: paused;
+    position: relative;
+}
+
+#imageDisplay_player::after {
+    content: "";
+    border-radius: 50%;
+    background: linear-gradient(#014, #013);
+    padding:16px;
+    position: absolute;
+    top: 42%;
+    right: 42%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) ;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#controller {     
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 213px;
+    height: 100%;
+}
+
+#progress-container{
+    margin-top: 20px;
+    background-color: rgba(58, 58, 58, 0.407);
+    height: 5px;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#progress{
+    background: linear-gradient(80deg, rgb(0, 200, 255),rgb(11, 80, 200),rgb(87, 3, 230), rgb(178, 10, 251));
+    margin-top: 20px;
+    border-radius: 15px;
+    height: 100%;
+    width: 0%;
+    transition:  width 0.1s linear;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+   
+}
+
+ion-icon, svg{   
+    padding: 5px;
+    justify-content: space-evenly;
+    font-size: 64px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    font-size: 40px;
+}
+
+.volume{
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#pause { display: none; }
+
